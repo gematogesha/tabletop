@@ -29,8 +29,9 @@
     font-weight: normal;
     color: #FFF !important;
     width: 25px;
-    height 25px;
+    height: 25px;
     border-radius: 50%;
+    margin: auto;
     
 }
 
