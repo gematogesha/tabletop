@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+        <title>Вход | Регистрация</title>
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/color.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/fonts.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/fontawesome.css">
+    </head>
+
+    <body>
+        <div class="body-block" style="padding-bottom: 0; min-height: 100vh;">
+            <div class="wrap">
+                <div class="space-header"></div>
+                <div class="small-header">Добро пожаловать!</div>
+                <div class="choice-header">
+                    <div class="choice-header-item active-choice-item" id="login">Вход</div>
+                    <div class="choice-header-item" id="reg">Регистрация</div>
+                </div>
+                <div class="choice-item-line"></div>
+                <div class="dark-line"></div>
+            </div>
+            <div class="user-data">
+                <div class="user-data-row">
+                    <div class="wrap">
+                        <div class="input-user-data">
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-arrow-right-to-bracket"></i>
+                                <input class="input-data" type="text" id="login-ent" placeholder="Логин">
+                            </div>
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-lock"></i>
+                                <input class="input-data" type="password" id="password-ent" placeholder="Пароль">
+                            </div>
+                        </div>
+                        <div class="status-info" id="info-login"></div>
+                        <div class="yel-btn">
+                            <button type="submit_color" name="login-submit" class="btn" id="login-submit">Войти</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-data-row">
+                    <div class="wrap">
+                        <div class="input-user-data">
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-arrow-right-to-bracket"></i>
+                                <input class="input-data" type="text" id="login-reg" autocomplete="off" placeholder="Логин" maxlength="10">
+                            </div>
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-user"></i>
+                                <input class="input-data" type="text" id="name-reg" placeholder="Имя" maxlength="10">
+                            </div>
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-lock"></i>
+                                <input class="input-data" type="password" id="password-reg" autocomplete="new-password" placeholder="Пароль">
+                            </div>
+                            <div class="input-data-row">
+                                <i class="fa-regular fa-lock"></i>
+                                <input class="input-data" type="password" id="second-password-reg" autocomplete="new-password" placeholder="Повторите пароль">
+                            </div>
+                        </div>
+                        <div class="status-info" id="info-reg"></div>
+                        <div class="yel-btn">
+                            <button type="submit_color" name="reg-submit" class="btn" id="reg-submit">Регистрация</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/login.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,416 @@
+body {
+    background: var(--dark-blue);
+    color: #fff;
+    height: 100%;
+    font-family: 'Vinnytsia';
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.body-block {
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 85px;
+}
+
+.wrap {
+    width: calc(100% - 40px);
+    min-width: 280px;
+    padding: 0 20px;
+}
+
+.space-header {
+    padding-bottom: 40px;
+}
+
+.small-header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.choice-header {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.dark-line {
+    display: block;
+    border-bottom: 1px solid var(--gray);
+    width: 100vw;
+    margin-left: -20px;
+}
+
+.choice-header-item {
+    padding: 15px 0;
+    text-align: center;
+    width: 50%;
+    float: left;
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--color-gray);
+    /*border-bottom: 2px solid rgba(0, 0, 0, 0);*/
+}
+
+.choice-header-item:hover {
+    color: var(--yellow)
+}
+
+.active-choice-item {
+    /*border-bottom: 2px solid var(--yellow);*/
+    color: var(--yellow)
+}
+
+.choice-item-line {
+    display: block;
+    width: 50%;
+    border-bottom: 2px solid var(--yellow);
+}
+
+.user-data {
+    width: 200%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+}
+
+.user-data-row {
+    width: 50%;
+    float: left;
+    height: auto;
+    transition: 0.2s;
+}
+
+
+.input-data-row {
+    border: 2px solid var(--gray);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.active-input-data {
+    border: 2px solid var(--yellow);
+}
+
+.input-data {
+    display: inline;
+    width: calc(100% - 54px);
+    background: var(--dark-blue);
+    padding: 20px 0 18px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.input-data::placeholder {
+    color: #fff;
+}
+
+.input-data:focus {
+    outline: none;
+}
+
+.input-data-row [class^="fa-"],
+.input-data-row [class*=" fa-"] {
+    font-size: 14px;
+    line-height: 51px;
+    height: 52px;
+    padding: 0 20px;
+    float: left;
+    color: var(--color-gray)
+}
+
+.yel-btn {
+    position: absolute;
+    bottom: 30px;
+    padding: 0 10px;
+    width: calc(100% - 60px);
+    height: auto;
+}
+
+.btn {
+    width: 100%;
+    padding: 20px 0;
+    border: none;
+    color: #000;
+    background-color: var(--yellow);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.status-info {
+    margin: auto;
+    max-width: 300px;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 20px;
+    display: none;
+    min-height: 20px;
+}
+
+.alert {
+    color: var(--red);
+}
+
+.success {
+    color: var(--green);
+}
+
+.big-header {
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.header-title {
+    color: var(--color-gray);
+    font-size: 12px;
+}
+
+.game-list {
+    height: auto;
+    padding: 30px 0;
+    min-width: 240px;
+}
+
+
+.game-list-item {
+    background-color: var(--gray);
+    color: var(--color-gray);
+    padding: 20px;
+    width: calc(100% - 40px);
+    margin-right: 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.game-list-item div {
+    padding: 5px 0;
+}
+
+.game-main-info,
+.game-main,
+.profile-main-info,
+.profile-main,
+.game-role div {
+    padding: 0 !important;
+}
+
+.profile-main-info,
+.game-main-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.game-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.near {
+    background-color: var(--yellow);
+    color: #000;
+}
+
+.near .game-name {
+    color: #000;
+}
+
+.game-name {
+    font-size: 20px;
+    color: #FFF;
+}
+
+.game-role {
+    height: 100%;
+    padding: 0 !important;
+    width: auto;
+    float: right;
+    position: relative;
+}
+
+.slave-img, .master-img {
+    height: 64px;
+    width: 64px;
+    border: 4px solid var(--red);
+    border-radius: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.master-img::after {
+    content: 'мастер';
+    bottom: 0;
+    height: min-content;
+    position: absolute;
+    padding: 5px;
+    background: var(--red);
+    border-radius: 10px;
+    color: #FFF;
+    left: 6px;
+    bottom: -6px;
+}
+
+.slave-img{
+    border: 4px solid var(--blue) !important; 
+}
+
+.slave-img::after {
+    content: 'игрок';
+    bottom: 0;
+    height: min-content;
+    position: absolute;
+    padding: 5px;
+    background: var(--blue);
+    border-radius: 10px;
+    color: #FFF;
+    left: 12px;
+    bottom: -6px;
+}
+
+.game-add-info {
+    display: none;
+}
+
+.game-add-info-grid {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+.game-add-info span {
+    color: #FFF;
+}
+
+.near .game-add-info span {
+    color: #000;
+}
+
+.go-list {
+    float: left;
+    padding: 0 !important;
+    margin-left: 8px;
+
+}
+
+.circle {
+    padding: 0 !important;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    float: left;
+    border: 3px solid var(--gray);
+    margin-left: -8px;
+    position: sticky;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.near .circle {
+    border: 3px solid var(--yellow);
+}
+
+.game-add-info [class$="-game"] {
+    width: max-content;
+    margin: 0 5px 0 0;
+}
+
+.header-profile{
+    padding-bottom: 30px;
+    background: var(--yellow);
+    color: #000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bot-menu {
+    z-index: 1000;
+    padding: 20px 30px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 60px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray);
+    background-color: var(--dark-blue);
+    min-width: 280px;
+}
+
+.bot-menu-item {
+    display: inline;
+    height: 14px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.bot-menu-item span {
+    display: none;
+    line-height: 18px;
+    color: var(--yellow);
+    transition: 0.2s;
+
+}
+
+.active-bot-menu {
+    background: var(--dark);
+    transition: 0.2s;
+    display: inline;
+}
+
+.bot-menu [class^="fa-"],
+.bot-menu [class*=" fa-"] {
+    font-size: 14px;
+    line-height: 15px;
+    height: 15px;
+    padding: 0 5px 0 0;
+    float: left;
+    color: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+    height: 2px;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray);
+}
