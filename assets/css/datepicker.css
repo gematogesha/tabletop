@@ -8,13 +8,13 @@
     top: auto !important; 
     background: var(--gray);
     color: #FFF;
+    z-index: 1000 !important;
 }
 
 .ui-widget-header {
     border: none !important;
     background: none !important;
     color: #FFF !important;
-    font-weight: 400 !important;
 }
 
 .ui-datepicker td span, .ui-datepicker td a {
@@ -26,17 +26,23 @@
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
     border: none !important;
     background: none !important;
-    font-weight: normal;
     color: #FFF !important;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     margin: auto;
+    line-height: 27px;
     
 }
 
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    background: var(--yellow) !important;
+    color: #000 !important;
+    font-weight: bold !important; 
+}
+
 .ui-datepicker td {
-    padding: 15px !important;
+    padding: 14px !important;
 }
 
 .ui-datepicker .ui-datepicker-header {
@@ -48,6 +54,23 @@
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-    background: var(--yellow) !important;
-    color: #000 !important;
+    background: var(--light-gray) !important;
+}
+
+
+.ui-widget-header .ui-icon {
+    background-image: none !important; 
+}
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: none !important; 
+}
+
+.ui-corner-all [class^="fa-"],
+.ui-corner-all [class*=" fa-"] {
+    font-size: 14px;
+    line-height: 51px;
+    height: 25px;
+    padding: 0px;
+    float: left;
+    color: #FFF;
 }

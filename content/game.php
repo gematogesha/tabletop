@@ -21,12 +21,25 @@ $date = date('d ', strtotime($row['date'])) . $monthes[(date('n'))] . date(' Y',
 $time = date('H:i ', strtotime($row['time']));
 
 $id = $row['id'];
+
+$aDate = time();
+$bDate = strtotime($row['date']); // Установленная мною дата
+ 
+$datediff = $bDate - $aDate;
+
+
+function secondsToTime($seconds) {
+    $dtF = new \DateTime('@0');
+    $dtT = new \DateTime("@$seconds");
+    return $dtF->diff($dtT)->format('%aд, %hч, %iм');
+}
+
 ?>
 <div class="wrap">
     <div class="space-header"></div>
     <div class="big-header">Ближайшая</div>
     <?php if ($row) { ?>
-        <div class="header-title">Осталось</div>
+        <div class="header-title">Осталось <?php echo secondsToTime($datediff); ?></div>
     <?php } else { ?>
         <div class="header-title">Игру еще не создали</div>
     <?php }; ?>

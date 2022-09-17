@@ -12,6 +12,16 @@ $(".bot-menu-item").click(function(e) {
         });
 });
 
+
+$(window).on('load', function() {
+    $('body').addClass('loaded_hiding');
+    window.setTimeout(function() {
+        $('body').addClass('loaded');
+        $('body').removeClass('loaded_hiding');
+    }, 500);
+})
+
+
 $(".bot-menu-item").focusout(function() {
     $(".bot-menu-item").removeClass('active-bot-menu');
 });

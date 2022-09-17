@@ -12,7 +12,8 @@ include("../include/config.php");
 
 </div>
 
-<script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
+
+<script src="assets/js/jquery-ui.js" type="text/javascript"></script>
 <script src="assets/js/datapicker-rus.js" type="text/javascript"></script>
 
 <script>

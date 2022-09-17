@@ -7,6 +7,11 @@ setTimeout(function (e) {
         $('title').text('Создать игру');      
     }
 
+    if($('.active-bot-menu').attr('id') != 'create'){
+        $('#ui-datepicker-div').remove();
+        
+    }
+
     function setLocation(curLoc){
         try {
           history.pushState(null, null, curLoc);
