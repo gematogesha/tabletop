@@ -65,7 +65,7 @@ $('#login-submit').on('click', function (e) {
         error: function () {
             $("#info-login").append("<span>Проблема соединения с сервером</span>");
             $("#info-login").addClass("alert");
-            $("#info-login").fadeIn(300).delay(2000).fadeOut(300);
+            $("#info-login").fadeIn('fast').delay(2000).fadeOut('fast');
 
         }
     });
@@ -91,20 +91,20 @@ $('#reg-submit').on('click', function (e) {
             $('#info-reg').append(responce);
             if((responce.indexOf('Успешно!') >= 0)){                    
                 $("#info-reg").addClass("success");
-                $("#info-reg").fadeIn(300).delay(1000).fadeOut(300);
+                $("#info-reg").fadeIn('fast').delay(1000).fadeOut('fast');
                 setTimeout(function() {
                     window.location.href = "main.php?p=profile";
                     }, 1600);
             }else{
                 $("#info-reg").addClass("alert");
-                $("#info-reg").fadeIn(300).delay(2000).fadeOut(300);
+                $("#info-reg").fadeIn('fast').delay(2000).fadeOut('fast');
             }
 
         },
         error: function () {
             $("#info-reg").append("<span>Проблема соединения с сервером</span>");
             $("#info-reg").addClass("alert");
-            $("#info-reg").fadeIn(300).delay(2000).fadeOut(300);
+            $("#info-reg").fadeIn('fast').delay(2000).fadeOut('fast');
 
         }
     });

@@ -10,6 +10,7 @@ if (isset($_POST['login_submit'])) {
 
     if ($row > 0) {
         $_SESSION['login'] = $login;
+        $_SESSION['user_id'] = $row['id'];
         echo "Успешно!";
     } elseif ($login == '' or $password == '') {
         echo "Не все данные были введены";
@@ -21,8 +22,8 @@ if (isset($_POST['login_submit'])) {
 }
 
 if (isset($_POST['reg_submit'])) {
-    $login = $_POST['login'];
-    $name = $_POST['name'];
+    $login = rtrim($_POST['login']);
+    $name = rtrim($_POST['name']);
     $password = $_POST['password'];
     $second_password = $_POST['second_password'];
     $res = mysqli_query($con, "SELECT login FROM users");
@@ -45,7 +46,9 @@ if (isset($_POST['reg_submit'])) {
             
             $go_sql = mysqli_query($con, "ALTER TABLE go_list ADD user_id_$role_id INT(11) NOT NULL DEFAULT '0'");
             if ($sql and $role_sql and $go_sql) {
+                $user_id = mysqli_insert_id($con);
                 $_SESSION['login'] = $login;
+                $_SESSION['user_id'] = $user_id;
                 echo "Успешно!";
             } else {
                 echo "Не удалось зарегистрироваться";
@@ -63,3 +66,4 @@ if (isset($_POST['reg_submit'])) {
         }
     }
 }
+?>

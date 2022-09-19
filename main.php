@@ -21,6 +21,8 @@ if (strlen($_SESSION['login']) == 0) {
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/clockpicker.css">
+    <link rel="stylesheet" href="assets/css/standalone.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">

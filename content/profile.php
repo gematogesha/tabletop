@@ -29,16 +29,21 @@ $row_role = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM game_role WHERE
 
                 if (in_array('master', $row_role)) {
                 ?>
-                    <div class="master-img" style="background-image: url('<?php echo $photo; ?>');" title="<?php echo $name; ?>"></div>
+                <div class="master-img" style="background-image: url('<?php echo $photo; ?>');"
+                    title="<?php echo $name; ?>"></div>
                 <?php } elseif (in_array('slave', $row_role)) { ?>
-                    <div class="slave-img" style="background-image: url('<?php echo $photo; ?>');" title="<?php echo $name; ?>"></div>
+                <div class="slave-img" style="background-image: url('<?php echo $photo; ?>');"
+                    title="<?php echo $name; ?>"></div>
                 <?php } ?>
             </div>
         </div>
     </div>
 </div>
 <div class="wrap">
-<div class="big-header">Выбери роль</div>
-    <div class="logout">Выход</div>
+    <div class="big-header">Выбери роль</div>
+    <div class="yel-btn yel-btn-noindex logout">
+        <button type="submit" name="login-submit" class="btn" id="login-submit">Выйти</button>
+    </div>
+
 
 </div>

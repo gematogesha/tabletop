@@ -132,6 +132,14 @@ body {
     height: auto;
 }
 
+.yel-btn-noindex{
+    position: initial; 
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+}
+
+
+
 .btn {
     width: 100%;
     padding: 20px 0;
@@ -140,6 +148,16 @@ body {
     background-color: var(--yellow);
     border-radius: 15px;
     cursor: pointer;
+}
+
+.alert-btn{
+    color: #FFF;
+    background-color: var(--red); 
+}
+
+.success-btn{
+    color: #000;
+    background-color: var(--green);  
 }
 
 .status-info {
@@ -278,7 +296,7 @@ body {
 
 .game-add-info-grid {
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
+    grid-template-columns: 77px 1fr;
     justify-items: start;
     align-items: center;
 }
